@@ -1,86 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FHU-CD-F0D">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--Solid Line Chart Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <scene sceneID="Bky-Hi-pyf">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="SolidLineChartInterfaceController" customModule="YOChartImageKit_Demo">
+                <controller id="iyT-6T-gUa" customClass="SolidLineChartInterfaceController" customModule="YOChartImageKit_Demo">
                     <items>
-                        <imageView alignment="center" verticalAlignment="center" id="Fst-AR-mdu"/>
+                        <imageView alignment="center" verticalAlignment="center" id="Oub-gQ-igc"/>
                     </items>
                     <connections>
-                        <outlet property="imageView" destination="Fst-AR-mdu" id="Jsu-dQ-bNK"/>
-                        <segue destination="G2f-Q2-DBu" kind="relationship" relationship="nextPage" id="pcF-jG-OOt"/>
+                        <outlet property="imageView" destination="Oub-gQ-igc" id="NF9-gq-7lf"/>
+                        <segue destination="lQF-ot-KOq" kind="relationship" relationship="nextPage" id="LQQ-w2-UkH"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="216" y="331"/>
         </scene>
         <!--Vertical Bar Chart Interface Controller-->
-        <scene sceneID="3hH-ra-Oq4">
+        <scene sceneID="Gwx-Ej-XdZ">
             <objects>
-                <controller id="4qn-9b-EgK" customClass="VerticalBarChartInterfaceController" customModule="YOChartImageKit_Demo">
+                <controller id="Mnc-hW-VlU" customClass="VerticalBarChartInterfaceController" customModule="YOChartImageKit_Demo">
                     <items>
-                        <imageView alignment="center" verticalAlignment="center" id="2Yv-Av-ZCt"/>
+                        <imageView alignment="center" verticalAlignment="center" id="7k2-aO-Iv1"/>
                     </items>
                     <connections>
-                        <outlet property="imageView" destination="2Yv-Av-ZCt" id="1c8-k5-JJq"/>
-                        <segue destination="qk8-NW-G2o" kind="relationship" relationship="nextPage" id="RgP-hO-Ys7"/>
+                        <outlet property="imageView" destination="7k2-aO-Iv1" id="f2q-Xz-IW5"/>
+                        <segue destination="SX0-Ql-E0i" kind="relationship" relationship="nextPage" id="b2G-Zi-3nK"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="537" y="331"/>
         </scene>
         <!--Smooth Line Chart Interface Controller-->
-        <scene sceneID="HIq-fC-33p">
+        <scene sceneID="5kh-Ag-43b">
             <objects>
-                <controller hidesWhenLoading="NO" id="G2f-Q2-DBu" customClass="SmoothLineChartInterfaceController" customModule="YOChartImageKit_Demo">
+                <controller hidesWhenLoading="NO" id="lQF-ot-KOq" customClass="SmoothLineChartInterfaceController" customModule="YOChartImageKit_Demo">
                     <items>
-                        <imageView alignment="center" verticalAlignment="center" id="q14-e0-dfi"/>
+                        <imageView alignment="center" verticalAlignment="center" id="p9H-1R-G7d"/>
                     </items>
                     <connections>
-                        <outlet property="imageView" destination="q14-e0-dfi" id="vJa-4q-yBF"/>
-                        <segue destination="4qn-9b-EgK" kind="relationship" relationship="nextPage" id="PNf-Vj-uqn"/>
+                        <outlet property="imageView" destination="p9H-1R-G7d" id="C8a-Tv-dNm"/>
+                        <segue destination="Mnc-hW-VlU" kind="relationship" relationship="nextPage" id="AYD-kZ-HPv"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="373" y="331"/>
         </scene>
         <!--Donut Chart Interface Controller-->
-        <scene sceneID="8jP-0f-amr">
+        <scene sceneID="g4g-az-KSI">
             <objects>
-                <controller id="bTT-pO-Kfx" customClass="DonutChartInterfaceController" customModule="YOChartImageKit_Demo">
+                <controller id="MQ1-B9-9WF" customClass="DonutChartInterfaceController" customModule="YOChartImageKit_Demo">
                     <items>
-                        <imageView alignment="center" verticalAlignment="center" id="bwX-ff-TQu"/>
+                        <imageView alignment="center" verticalAlignment="center" id="KOR-zc-tbh"/>
                     </items>
                     <connections>
-                        <outlet property="imageView" destination="bwX-ff-TQu" id="hsx-0k-2na"/>
+                        <outlet property="imageView" destination="KOR-zc-tbh" id="kFh-6l-wqg"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="849" y="331"/>
         </scene>
         <!--Horizontal Bar Chart Interface Controller-->
-        <scene sceneID="N2e-7j-XBb">
+        <scene sceneID="47a-eX-MjN">
             <objects>
-                <controller hidesWhenLoading="NO" id="qk8-NW-G2o" customClass="HorizontalBarChartInterfaceController" customModule="YOChartImageKit_Demo">
+                <controller hidesWhenLoading="NO" id="SX0-Ql-E0i" customClass="HorizontalBarChartInterfaceController" customModule="YOChartImageKit_Demo">
                     <items>
-                        <imageView alignment="center" verticalAlignment="center" id="81V-z1-bx7"/>
+                        <imageView alignment="center" verticalAlignment="center" id="lQQ-l9-Ufq"/>
                     </items>
                     <connections>
-                        <outlet property="imageView" destination="81V-z1-bx7" id="8Wf-N2-El9"/>
-                        <segue destination="bTT-pO-Kfx" kind="relationship" relationship="nextPage" id="k0T-J4-EEs"/>
+                        <outlet property="imageView" destination="lQQ-l9-Ufq" id="Ujb-kK-JxR"/>
+                        <segue destination="MQ1-B9-9WF" kind="relationship" relationship="nextPage" id="CRX-U1-CjF"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="693" y="331"/>
         </scene>
+        <!--Spinning Donut Chart Interface Controller-->
+        <scene sceneID="vKs-df-yRg">
+            <objects>
+                <controller id="FHU-CD-F0D" customClass="SpinningDonutChartInterfaceController" customModule="YOChartImageKit_Demo">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" id="g9F-KA-ufS"/>
+                    </items>
+                    <color key="backgroundColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="imageView" destination="g9F-KA-ufS" id="nwD-QR-Dba"/>
+                        <segue destination="MQ1-B9-9WF" kind="relationship" relationship="nextPage" id="MN9-AO-y3I"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="60" y="331"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MN9-AO-y3I"/>
+    </inferredMetricsTieBreakers>
 </document>

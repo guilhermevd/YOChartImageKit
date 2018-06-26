@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72D0FFBF20E28665002D0EDA /* SpinningDonutChartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D0FFBC20E2865E002D0EDA /* SpinningDonutChartInterfaceController.swift */; };
+		72D0FFC220E2867B002D0EDA /* YOSpinningDonutChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D0FFC020E2867B002D0EDA /* YOSpinningDonutChartImage.m */; };
+		72D0FFC320E2867B002D0EDA /* YOSpinningDonutChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D0FFC020E2867B002D0EDA /* YOSpinningDonutChartImage.m */; };
+		72D0FFC420E2867B002D0EDA /* YOSpinningDonutChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D0FFC120E2867B002D0EDA /* YOSpinningDonutChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72D0FFC520E2867B002D0EDA /* YOSpinningDonutChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D0FFC120E2867B002D0EDA /* YOSpinningDonutChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8154AB81B2A594B001B3024 /* YODonutChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C0FF6E1B29831E00BA4E81 /* YODonutChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8154AB91B2A594B001B3024 /* YODonutChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C0FF6F1B29831E00BA4E81 /* YODonutChartImage.m */; };
 		A8154ABA1B2A594B001B3024 /* YOBarChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C0FF731B29888E00BA4E81 /* YOBarChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -126,6 +131,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		72D0FFBC20E2865E002D0EDA /* SpinningDonutChartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinningDonutChartInterfaceController.swift; sourceTree = "<group>"; };
+		72D0FFC020E2867B002D0EDA /* YOSpinningDonutChartImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSpinningDonutChartImage.m; sourceTree = "<group>"; };
+		72D0FFC120E2867B002D0EDA /* YOSpinningDonutChartImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSpinningDonutChartImage.h; sourceTree = "<group>"; };
 		A8154AB01B2A5917001B3024 /* YOChartImageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YOChartImageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81AB56C1B2B074000FE8B93 /* YOChartImageKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YOChartImageKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81AB56F1B2B074000FE8B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -225,6 +233,7 @@
 				A872CC211B328A900086554F /* VerticalBarChartInterfaceController.swift */,
 				A8B509651B688E6700F596ED /* HorizontalBarChartInterfaceController.swift */,
 				A872CC231B328A9F0086554F /* DonutChartInterfaceController.swift */,
+				72D0FFBC20E2865E002D0EDA /* SpinningDonutChartInterfaceController.swift */,
 				A81AB57F1B2B074100FE8B93 /* ExtensionDelegate.swift */,
 				A81AB5811B2B074100FE8B93 /* Assets.xcassets */,
 				A81AB5831B2B074100FE8B93 /* Info.plist */,
@@ -272,6 +281,8 @@
 				A8C0FF741B29888E00BA4E81 /* YOBarChartImage.m */,
 				A8C0FF6E1B29831E00BA4E81 /* YODonutChartImage.h */,
 				A8C0FF6F1B29831E00BA4E81 /* YODonutChartImage.m */,
+				72D0FFC120E2867B002D0EDA /* YOSpinningDonutChartImage.h */,
+				72D0FFC020E2867B002D0EDA /* YOSpinningDonutChartImage.m */,
 			);
 			name = "YOChartImageKit (Common)";
 			path = Source/YOChartImageKit;
@@ -331,6 +342,7 @@
 			files = (
 				A836D41A1BB244ED00169EC7 /* YOChartImageKit.h in Headers */,
 				A8154ABC1B2A594B001B3024 /* YOLineChartImage.h in Headers */,
+				72D0FFC520E2867B002D0EDA /* YOSpinningDonutChartImage.h in Headers */,
 				A8154AB81B2A594B001B3024 /* YODonutChartImage.h in Headers */,
 				A8154ABA1B2A594B001B3024 /* YOBarChartImage.h in Headers */,
 			);
@@ -342,6 +354,7 @@
 			files = (
 				A851576C1B99CF0600CA58EF /* YOChartImageKit.h in Headers */,
 				A8C876B41B2AAA5F0092E5FF /* YOLineChartImage.h in Headers */,
+				72D0FFC420E2867B002D0EDA /* YOSpinningDonutChartImage.h in Headers */,
 				A8C876B21B2AAA5F0092E5FF /* YOBarChartImage.h in Headers */,
 				A8C876B01B2AAA5F0092E5FF /* YODonutChartImage.h in Headers */,
 			);
@@ -455,6 +468,7 @@
 				TargetAttributes = {
 					A8154AAF1B2A5917001B3024 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0920;
 					};
 					A81AB56B1B2B074000FE8B93 = {
 						CreatedOnToolsVersion = 7.0;
@@ -465,6 +479,7 @@
 					};
 					A8C876921B2AAA050092E5FF = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0920;
 					};
 					A8D9D61B1B28703400E4BCEC = {
 						CreatedOnToolsVersion = 7.0;
@@ -546,6 +561,7 @@
 				A8154ABB1B2A594B001B3024 /* YOBarChartImage.m in Sources */,
 				A8154ABD1B2A594B001B3024 /* YOLineChartImage.m in Sources */,
 				A8154AB91B2A594B001B3024 /* YODonutChartImage.m in Sources */,
+				72D0FFC320E2867B002D0EDA /* YOSpinningDonutChartImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +573,7 @@
 				A872CC221B328A900086554F /* VerticalBarChartInterfaceController.swift in Sources */,
 				A86251451B4532C60036BC13 /* YOChart.swift in Sources */,
 				A872CC241B328A9F0086554F /* DonutChartInterfaceController.swift in Sources */,
+				72D0FFBF20E28665002D0EDA /* SpinningDonutChartInterfaceController.swift in Sources */,
 				A8B509661B688E6700F596ED /* HorizontalBarChartInterfaceController.swift in Sources */,
 				A81AB5801B2B074100FE8B93 /* ExtensionDelegate.swift in Sources */,
 				A81AB57E1B2B074100FE8B93 /* BaseInterfaceController.swift in Sources */,
@@ -571,6 +588,7 @@
 				A8C876B11B2AAA5F0092E5FF /* YODonutChartImage.m in Sources */,
 				A8C876B51B2AAA5F0092E5FF /* YOLineChartImage.m in Sources */,
 				A8C876B31B2AAA5F0092E5FF /* YOBarChartImage.m in Sources */,
+				72D0FFC220E2867B002D0EDA /* YOSpinningDonutChartImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +661,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				BITCODE_GENERATION_MODE = marker;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -656,6 +675,7 @@
 				PRODUCT_NAME = YOChartImageKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.1;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -669,6 +689,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				BITCODE_GENERATION_MODE = bitcode;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -693,7 +714,6 @@
 		A81AB5881B2B074100FE8B93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Example/YOGraphImageKit Demo App (watchOS) Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -710,7 +730,6 @@
 		A81AB5891B2B074100FE8B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Example/YOGraphImageKit Demo App (watchOS) Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -766,6 +785,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				BITCODE_GENERATION_MODE = marker;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -779,6 +799,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasuoza.iosframework.YOChartImageKit;
 				PRODUCT_NAME = YOChartImageKit;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -791,6 +812,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				BITCODE_GENERATION_MODE = bitcode;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

@@ -16,48 +16,18 @@
 - (UIImage *)drawImage:(CGRect)frame scale:(CGFloat)scale {
     NSAssert(_values.count > 0, @"YODonutChartImage // must assign values property which is an array of NSNumber");
     NSAssert(_colors.count >= _values.count, @"YOGraphPieChartImage // must assign colors property which is an array of UIColor");
-
-#if TARGET_OS_IOS
-    return [self drawImagePreferringImageRenderer:frame scale:scale];
-#else
-    return [self drawImageForGeneral:frame scale:scale];
-#endif
-}
-
-#pragma mark - Draw Image(Private)
-
-#if TARGET_OS_IOS
-- (UIImage *)drawImagePreferringImageRenderer:(CGRect)frame scale:(CGFloat)scale {
-    if ([UIGraphicsImageRenderer class]) {
-        return [[[UIGraphicsImageRenderer alloc] initWithSize:frame.size] imageWithActions:^(UIGraphicsImageRendererContext *rendererContext) {
-            [self drawPathIn:frame];
-        }];
-    } else {
-        return [self drawImageForGeneral:frame scale:scale];
-    }
-}
-#endif
-
-- (UIImage *)drawImageForGeneral:(CGRect)frame scale:(CGFloat)scale {
-    UIGraphicsBeginImageContextWithOptions(frame.size, false, scale);
-    [self drawPathIn:frame];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
-#pragma mark - Draw Paths(Private)
-
-- (void)drawPathIn:(CGRect)frame {
+    
     CGFloat totalValue = [[_values valueForKeyPath:@"@sum.self"] floatValue];
     CGPoint center = {
         frame.size.width / 2,
         frame.size.height / 2
     };
-
+    
     CGFloat maxLength = MIN(frame.size.width, frame.size.height);
     CGFloat radius = maxLength / 2 - _donutWidth / 2;
-
+    
+    UIGraphicsBeginImageContextWithOptions(frame.size, false, scale);
+    
     if (_labelText) {
         NSDictionary *attributes = @{
                                      NSForegroundColorAttributeName: _labelColor,
@@ -69,22 +39,71 @@
                                                    context:nil].size;
         [_labelText drawAtPoint:(CGPoint){center.x - size.width/2, center.y - size.height/2} withAttributes:attributes];
     }
-
+    
+    if (self.backgroundColor) {
+        CGFloat normalizedValue = 100 / totalValue;
+        CGFloat endAngle = _startAngle + 2.0 * M_PI * normalizedValue;
+        UIColor *strokeColor =  self.backgroundColor;
+        if (strokeColor != [UIColor clearColor]) {
+            UIBezierPath *donutPath = [UIBezierPath bezierPathWithArcCenter:center
+                                                                     radius:radius
+                                                                 startAngle:_startAngle
+                                                                   endAngle:endAngle
+                                                                  clockwise:YES];
+            donutPath.lineWidth = _donutWidth;
+            donutPath.lineCapStyle = _lineCapStyle;
+            donutPath.lineJoinStyle = kCGLineCapRound;
+            [strokeColor setStroke];
+            [donutPath stroke];
+        }
+    }
+    
+    if (self.endColor) {
+        CGFloat normalizedValue = self.finalValue / totalValue;
+        CGFloat endAngle = _startAngle + 2.0 * M_PI * normalizedValue;
+        UIColor *strokeColor = self.endColor;
+        if (strokeColor != [UIColor clearColor]) {
+            UIBezierPath *donutPath = [UIBezierPath bezierPathWithArcCenter:center
+                                                                     radius:radius
+                                                                 startAngle:_startAngle
+                                                                   endAngle:endAngle
+                                                                  clockwise:YES];
+            donutPath.lineWidth = _donutWidth;
+            donutPath.lineCapStyle = _lineCapStyle;
+            donutPath.lineJoinStyle = kCGLineCapRound;
+            [strokeColor setStroke];
+            [donutPath stroke];
+            
+        }
+    }
+    
     [_values enumerateObjectsUsingBlock:^(NSNumber *number, NSUInteger idx, BOOL *_) {
         CGFloat normalizedValue = number.floatValue / totalValue;
-        UIColor *strokeColor = self.colors[idx];
-
-        CGFloat endAngle = self.startAngle + 2.0 * M_PI * normalizedValue;
-        UIBezierPath *donutPath = [UIBezierPath bezierPathWithArcCenter:center
-                                                                 radius:radius
-                                                             startAngle:self.startAngle
-                                                               endAngle:endAngle
-                                                              clockwise:YES];
-        donutPath.lineWidth = self.donutWidth;
-        [strokeColor setStroke];
-        [donutPath stroke];
-        self.startAngle = endAngle;
+        CGFloat endAngle = _startAngle + 2.0 * M_PI * normalizedValue;
+        UIColor *strokeColor = _colors[idx];
+        if (strokeColor != [UIColor clearColor]) {
+            
+            
+            
+            UIBezierPath *donutPath = [UIBezierPath bezierPathWithArcCenter:center
+                                                                     radius:radius
+                                                                 startAngle:_startAngle
+                                                                   endAngle:endAngle
+                                                                  clockwise:YES];
+            donutPath.lineWidth = _donutWidth;
+            donutPath.lineCapStyle = _lineCapStyle;
+            donutPath.lineJoinStyle = kCGLineCapRound;
+            [strokeColor setStroke];
+            [donutPath stroke];
+        }
+        
+        _startAngle = endAngle;
     }];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
+

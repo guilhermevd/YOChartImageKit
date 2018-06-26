@@ -11,43 +11,49 @@
  *  The array of values for the donut chart. `values` should be an array of NSNumber.
  *  You must provide `values`, otherwise raises an exception.
  */
-@property (nonnull, nonatomic) NSArray<NSNumber *> *values;
+@property (nonnull) NSArray<NSNumber *> *values;
 
 /**
  *  The array of colors for the donut chart. `colors` should be an array of UIColor.
  *  You must provide `colors`, otherwise raises an exception.
  */
-@property (nonnull, nonatomic) NSArray<UIColor *> *colors;
+@property (nonnull) NSArray<UIColor *> *colors;
 
 /**
  *  The point where the donut starts
  *  The default width is `-M_PI_2`, which means the degree 0 of the circle.
  */
-@property (nonatomic) CGFloat startAngle;
+@property CGFloat startAngle;
 
 /**
  *  The width of donut.
  *  The default width is `1.0`.
  */
-@property (nonatomic) CGFloat donutWidth;
+@property CGFloat donutWidth;
+
+/**
+ *  The default `lineCapStyle` of the internal `UIBezierPath`.
+ *  The default width is `kCGLineCapSquare` for historical reasons but `kCGLineCapSquare` is way cooler!
+ */
+@property CGLineCap lineCapStyle;
 
 /**
  *  The text of center label in donut chart.
  *  The default text is `nil`.
  */
-@property (nullable, nonatomic, copy) NSString *labelText;
+@property (nullable, copy) NSString *labelText;
 
 /**
  *  The color of center label in donut chart.
  *  The default color is black.
  */
-@property (nonnull, nonatomic) UIColor *labelColor;
+@property (nonnull) UIColor *labelColor;
 
 /**
  *  The font of center label in donut chart.
  *  The default font is UIFont with UIFontTextStyleBody.
  */
-@property (nonnull, nonatomic) UIFont *labelFont;
+@property (nonnull) UIFont *labelFont;
 
 /**
  *  Draws a image of donut chart.
@@ -59,4 +65,22 @@
  */
 - (UIImage * _Nonnull)drawImage:(CGRect)frame scale:(CGFloat)scale;
 
+/**
+ *  The color chart background.
+ *  The default color is clear color.
+ */
+@property (nullable) UIColor *backgroundColor;
+
+/**
+ *  The line end color.
+ *  The default color is clear color.
+ */
+@property (nullable) UIColor *endColor;
+
+/**
+ *  Value MUST be the same of value
+ */
+@property (assign, nonatomic) CGFloat finalValue;
+
 @end
+
